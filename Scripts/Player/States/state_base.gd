@@ -1,14 +1,14 @@
 extends Node2D
-class_name PlayerState
+class_name PawnState
 
-func enter(_player: Player) -> void:
+func enter(_player: Pawn) -> void:
 	pass
 	
-func exit(_player: Player) -> void:
+func exit(_player: Pawn) -> void:
 	pass
 
-func step(_player: Player, _delta: float) -> void:
+func step(_player: Pawn, _delta: float) -> void:
 	pass
 
-func animate(_player: Player, _delta: float) -> void:
+func animate(_player: Pawn, _delta: float) -> void:
 	pass

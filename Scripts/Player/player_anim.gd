@@ -1,5 +1,5 @@
 extends Sprite2D
-class_name PlayerSkin
+class_name PawnSkin
 
 const ANIMATION_STATES: Dictionary = {
 	"idle": 0,

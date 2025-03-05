@@ -1,20 +1,22 @@
 extends Node2D
-class_name PlayerStateMachine
+class_name StateMachine
 
 @export var initial_state: String = "Regular"
 
-@onready var player: Player = get_parent()
+@onready var player: Pawn = get_parent()
 
-@onready var states: Dictionary = {
-	"Regular": $Regular,
-	"Interacting": $Interacting,
-}
-
+var states: Dictionary[String, Node2D]
 var current_state: String
 var last_state: String
 
 func initialize() -> void:
+	initialize_states()
 	change_state(initial_state)
+
+func initialize_states() -> void:
+	for i in get_children():
+		var new_state: Node2D = i
+		states[i.name] = i
 
 func change_state(to: String) -> void:
 	if current_state:

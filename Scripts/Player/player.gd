@@ -4,8 +4,8 @@ class_name Player
 const SPEED: float = 50
 const SPRINT_SPEED: float = 100
 
-@onready var skin: PlayerSkin = $Skin
-@onready var state_machine: PlayerStateMachine = $StateMachine
+@onready var skin: PawnSkin = $Skin
+@onready var state_machine: StateMachine = $StateMachine
 
 var props_around: Array[Prop]
 
